@@ -3,9 +3,6 @@ from window import Window, Line, Point, Cell
 def main():
     win = Window(800, 600)
 
-    line = Line(Point(50, 50), Point(400, 400))
-    win.draw_line(line)
-
     cell1 = Cell(win)
     cell1.draw(50, 50, 100, 100)
 
@@ -20,6 +17,12 @@ def main():
     cell4 = Cell(win)
     cell4.has_top_wall = False
     cell4.draw(300, 300, 500, 500)
+
+    cell1.draw_move(cell2)
+
+    cell3.draw_move(cell4, True)
+
+
 
     win.wait_for_close()
 
