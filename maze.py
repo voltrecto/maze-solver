@@ -34,7 +34,7 @@ class Maze:
     
     def _draw_cell(self, i, j):
         x1 = self.x1 + i * self.cell_size_x
-        y1 = self.y1 + i * self.cell_size_y
+        y1 = self.y1 + j * self.cell_size_y
         x2 = x1 + self.cell_size_x
         y2 = y1 + self.cell_size_y
         self.cells[i][j].draw(x1, y1, x2, y2)
